@@ -34,7 +34,7 @@ const Work = () => {
     }
 
     return (
-        <div className='divide-y page-change-animation'>
+        <div id="works" className='divide-y page-change-animation'>
             <SectionLabel label="Works" />
             <div className='divide-y'>
                 <div className='py-7'>

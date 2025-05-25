@@ -78,7 +78,7 @@ const AboutMe = () => {
     };
 
     return (
-        <div className='page-change-animation'>
+        <div id="about-me" className='page-change-animation'>
             <div className='divide-y'>
                 <SectionLabel label="About Me" />
                 <div className=''>
@@ -89,12 +89,12 @@ const AboutMe = () => {
                         {
                             about.map(_ => (
                                 <div key={_.label} className='flex gap-4 justify-between mb-2 last:mb-0'>
-                                    <div className='bg-primary h-fit py-1 text-white text-sm px-2 rounded-sm leading-none flex items-center'>
+                                    <div className='bg-primary h-fit py-1 text-white text-sm px-2 rounded-sm leading-none flex items-center w-min sm:w-fit'>
                                         {_.label}:
                                     </div>
-                                    <div className='text-base flex gap-2 items-center'>
+                                    <div className='text-base flex gap-2 items-center text-end'>
                                         {!Array.isArray(_.value) ? _.value :
-                                            <div className='flex flex-wrap gap-2'>
+                                            <div className='flex flex-wrap gap-2 justify-end'>
                                                 {
                                                     _.value.map(skill => <div key={skill.name} className='h-[33px] relative text-xl group py-1 px-1.5 bg-gradient-to-br from-blue-200 rounded-lg to-transparent'>
                                                         {skill?.icon && skill?.icon}

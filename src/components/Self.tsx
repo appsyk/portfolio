@@ -21,7 +21,7 @@ const Self = () => {
     }, [count])
 
     return (
-        <div className='self-animation relative bg-white rounded-md w-[415px] h-full shadow-[10px_10px_15px_rgba(0,0,0,.05)] z-30'>
+        <div className='self-animation relative bg-white rounded-md w-full max-w-[415px] h-full shadow-[10px_10px_15px_rgba(0,0,0,.05)] z-30'>
             <div className='absolute -left-4 -top-4 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-transparent -z-[1] rounded-md w-full h-full'></div>
             <div className='relative overflow-hidden rounded-t-md -z-[1]'>
                 <Image
@@ -36,7 +36,7 @@ const Self = () => {
                 <div className='absolute bg-white w-full h-[65px] -bottom-11 rotate-12 -left-10'></div>
                 <div className='absolute bg-white w-full h-[65px] -bottom-11 -rotate-12 left-10'></div>
             </div>
-            <div className='bg-white -mt-3 w-[415px] rounded-b-md px-12 pt-6 divide-y text-secondary'>
+            <div className='bg-white -mt-3 w-full lg:w-[415px] max-w-[415px] rounded-b-md px-6 lg:px-12 pt-6 divide-y text-secondary'>
                 <div className='text-center mb-8'>
                     <h2 className='text-secondary text-4xl mb-4'>
                         {data.name}

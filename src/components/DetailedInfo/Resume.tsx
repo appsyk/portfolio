@@ -6,7 +6,7 @@ import React from 'react'
 
 const Resume = () => {
     return (
-        <div className='divide-y page-change-animation '>
+        <div id="resume" className='divide-y page-change-animation '>
             <SectionLabel label="Resume" />
             <div className='divide-y'>
                 <div className='py-7'>

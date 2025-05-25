@@ -1,6 +1,7 @@
 'use client'
 
-import { useViewContext } from '@/app/ViewContext';
+import { route, useViewContext } from '@/app/ViewContext';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 const SideOptions = () => {
@@ -29,12 +30,17 @@ const SideOptions = () => {
     ]
 
     const { view, setView } = useViewContext();
+    const router = useRouter();
 
     return (
-        <div className='bg-white rounded-md w-fit p-2 z-10 divide-y text-secondary h-fit side-option-animation'>
+        <div className='lg:block fixed -top-12 shadow-[10px_10px_15px_rgba(0,0,0,.05)] lg:shadow-none lg:static flex bg-white rounded-md w-fit p-2 z-40 lg:z-10 divide-x lg:divide-x-0 lg:divide-y text-secondary h-fit side-option-animation'>
             {
                 options.map((_, index) => (
-                    <div key={_.name} onClick={() => setView(index)} className={`flex gap-1 flex-col py-3 px-2 last:mb-0 justify-center items-center cursor-pointer group ${view === index ? '!text-primary' : ''}`}>
+                    <div key={_.name} onClick={() => {
+                        setView(index)
+                        router.push(route[index])
+                    }} className={`flex gap-1 flex-col px-4 py-2 lg:py-3 lg:px-2 last:mb-0 justify-center items-center cursor-pointer group
+                     ${view === index ? '!text-primary' : ''}`}>
                         <div className='w-6 h-6'>
                             {_.icon}
                         </div>
