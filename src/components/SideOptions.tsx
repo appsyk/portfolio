@@ -31,7 +31,7 @@ const SideOptions = () => {
     const { view, setView } = useViewContext();
 
     return (
-        <div className='bg-white rounded-md w-fit p-2 z-10 divide-y text-secondary h-fit'>
+        <div className='bg-white rounded-md w-fit p-2 z-10 divide-y text-secondary h-fit side-option-animation'>
             {
                 options.map((_, index) => (
                     <div key={_.name} onClick={() => setView(index)} className={`flex gap-1 flex-col py-3 px-2 last:mb-0 justify-center items-center cursor-pointer group ${view === index ? '!text-primary' : ''}`}>

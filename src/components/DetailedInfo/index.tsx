@@ -22,7 +22,7 @@ const DetailedInfo = () => {
   }
 
   return (
-    <div className="bg-white pt-0 pb-6 px-6 my-3 rounded-r-md overflow-y-auto overflow-x-hidden h-[calc(100%-10px)] z-20">
+    <div className="bg-white pt-0 pb-6 px-6 my-3 rounded-r-md overflow-y-auto overflow-x-hidden h-[calc(100%-10px)] z-20 detailed-info-animation">
       {viewComponent(view)}
     </div>
   )

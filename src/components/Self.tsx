@@ -21,7 +21,7 @@ const Self = () => {
     }, [count])
 
     return (
-        <div className='relative bg-white rounded-md w-[415px] h-full shadow-[10px_10px_15px_rgba(0,0,0,.05)] z-30'>
+        <div className='self-animation relative bg-white rounded-md w-[415px] h-full shadow-[10px_10px_15px_rgba(0,0,0,.05)] z-30'>
             <div className='absolute -left-4 -top-4 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-transparent -z-[1] rounded-md w-full h-full'></div>
             <div className='relative overflow-hidden rounded-t-md -z-[1]'>
                 <Image

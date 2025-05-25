@@ -10,7 +10,7 @@ const Dot = ({ duration, index, firstActive, showDot = true }: DotProps) => {
         <div className={`border rounded-md px-2 mb-2 text-xs w-fit ${firstActive && index === 0 ? 'border-primary text-primary' : 'border-border-grey text-border-grey'}`}>
             {duration}
         </div>
-        { showDot && <div className={`dot w-3 h-3 rounded-full absolute top-1 -left-10 ${firstActive && index === 0 ? 'bg-primary' : 'bg-gray-200'}`}></div>}
+        { showDot && <div className={`dot w-3 h-3 rounded-full absolute top-1 -left-10 ${firstActive && index === 0 ? 'bg-primary' : 'bg-secondary'}`}></div>}
     </div>)
 }
 
