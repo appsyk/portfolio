@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import PersistentSelf from "@/components/PersistentSelf";
+import { ViewContextProvider } from "./ViewContext";
+import Bubbles from "./common-components/Bubbles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +27,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="h-screen overflow-hidden">
+          <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-screen">
+            <Bubbles />
+          </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[51%] h-full max-h-[570px] w-full max-w-[1290px] px-12">
+            <div className="flex h-[inherit]">
+              <ViewContextProvider>
+                <PersistentSelf />
+                {children}
+              </ViewContextProvider>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

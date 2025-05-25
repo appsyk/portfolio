@@ -2,20 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.role-animation {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  font-weight: 500;
+  animation:
+    slide 5.5s ease-in-out infinite;
+}
+
+.image-zoom-animation {
+  animation: image-zoom 25.5s ease infinite;
+}
+
+.page-change-animation {
+  animation: page-change .7s ease-out;
+}
+
+.bg-boxes {
+  position: relative;
+  height: 100%;
+}
+
+.bg-boxes li:nth-child(even) {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, .1);
+  bottom: -320px;
+  animation: bg-box 50s infinite;
+  transition-timing-function: linear;
+}
+
+.bg-boxes li:nth-child(odd) {
+  animation: bg-box2 45s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-300px)
+  }
+
+  5% {
+    transform: translateX(5px)
+  }
+
+  10% {
+    transform: translateX(0)
+  }
+
+  85% {
+    transform: translateY(0)
+  }
+
+  95% {
+    transform: translateX(-15px)
+  }
+
+  100% {
+    transform: translateX(300px)
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes image-zoom {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.1)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes page-change {
+  0% {
+    transform: translateX(-900px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bg-box {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1500px) rotate(600deg);
+  }
+}
+
+@keyframes bg-box2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1500px) rotate(300deg);
+  }
+}
+
+.hover-effect {
+  transition: all 0.3s ease-in-out;
 }
