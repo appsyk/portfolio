@@ -1,6 +1,6 @@
-import SectionLabel from '@/app/common-components/SectionLabel'
+import SectionLabel from '@/common-components/SectionLabel'
 import data from '@/data/data'
-import React from 'react'
+import React, { useState } from 'react'
 
 const AboutMe = () => {
     const about = [
@@ -62,13 +62,28 @@ const AboutMe = () => {
             ]
         }
     ]
+
+    const [isCopied, setIsCopied] = useState(false);
+
+    const copyText = async (text: string) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            setIsCopied(true);
+            setTimeout(() => {
+                setIsCopied(false);
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    };
+
     return (
         <div className='page-change-animation'>
             <div className='divide-y'>
                 <SectionLabel label="About Me" />
                 <div className=''>
                     <div className='my-4'>
-                        {data.aboutme.desc}
+                        Hey, there &#128075; {data.aboutme.desc}
                     </div>
                     <div className=''>
                         {
@@ -77,7 +92,7 @@ const AboutMe = () => {
                                     <div className='bg-primary h-fit py-1 text-white text-sm px-2 rounded-sm leading-none flex items-center'>
                                         {_.label}:
                                     </div>
-                                    <div className='text-base'>
+                                    <div className='text-base flex gap-2 items-center'>
                                         {!Array.isArray(_.value) ? _.value :
                                             <div className='flex flex-wrap gap-2'>
                                                 {
@@ -87,6 +102,22 @@ const AboutMe = () => {
                                                     </div>)
                                                 }
                                             </div>
+                                        }
+                                        {
+                                            _.label.toLocaleLowerCase() === 'email' &&
+                                            <>
+                                                {
+                                                    isCopied ?
+                                                        <svg className='w-4 h-4 shrink-0 bg-green-500 rounded-full text-white' focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                            <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path>
+                                                        </svg>
+                                                        :
+                                                        <svg className='w-4 h-4 cursor-pointer text-gray-500 shrink-0' focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                                            onClick={() => copyText(typeof _?.value === 'string' ? _.value : '')}>
+                                                            <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z"></path>
+                                                        </svg>
+                                                }
+                                            </>
                                         }
                                     </div>
                                 </div>

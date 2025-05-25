@@ -9,15 +9,11 @@ body {
 
 .role-animation {
   overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
   white-space: nowrap;
-  /* Keeps the content on a single line */
   margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em;
   font-weight: 500;
-  animation:
-    slide 5.5s ease-in-out infinite;
+  animation: slide 5.5s ease-in-out infinite;
 }
 
 .image-zoom-animation {
@@ -25,7 +21,7 @@ body {
 }
 
 .page-change-animation {
-  animation: page-change .7s ease-out;
+  animation: page-change 1s ease-in-out;
 }
 
 .bg-boxes {
@@ -47,6 +43,74 @@ body {
 
 .bg-boxes li:nth-child(odd) {
   animation: bg-box2 45s infinite;
+}
+
+.wraper {
+  padding: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  width: 500px;
+  margin: 10px auto;
+}
+
+h1 {
+  margin: 50px auto;
+}
+
+.container {
+  border-top: 2px solid #000;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.link {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.link a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.link:first-child {
+  margin-left: -55px;
+}
+
+.link:last-child {
+  margin-right: -55px;
+}
+
+.link::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  border-radius: 10px;
+  top: -18px;
+  left: 50%;
+  transform: translatex(-50%);
+  border: 2px solid black;
+}
+
+.active::after,
+.link:hover::after {
+  background: black;
+}
+
+p.lead {
+  font-weight: 600;
+  margin: 50px auto;
+  line-height: 1.5;
 }
 
 @keyframes slide {
@@ -91,13 +155,13 @@ body {
 
 @keyframes page-change {
   0% {
-    transform: translateX(-900px);
     opacity: 0;
+    transform: translateX(-900px);
   }
 
   100% {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateX(0);
   }
 }
 

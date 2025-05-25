@@ -26,14 +26,12 @@ const data = {
     role: ['Software Developer', 'Frontend Developer', 'React Developer', 'UI Developer'],
     email: 'sanjoy.k1997@gmail.com',
     avatar: '/sanjay2.jpg',
-    instaUrl: '',
-    githubUrl: '',
-    linkedinUrl: '',
+    instaUrl: 'https://www.instagram.com/sanjaykhtal',
+    githubUrl: 'https://github.com/appsyk',
+    linkedinUrl: 'https://www.linkedin.com/in/sanjay-khatal-bb4454152/',
+    resume: 'https://drive.google.com/file/d/1_XwI472XY9qmK5B4mx8Bj4iL3YohBbdZ/view',
     aboutme: {
-        desc: `I am Sanjay Khatal, frontend developer with ${experience.years}+ years of experience in building responsive, crossplatform applications. Skilled in translating designs into scalable solutions and
-        optimizing performance. Currently working in the healthcare domain, ensuring
-        seamless UI/UX for critical applications. Gained on-site experience in Bhutan,
-        delivering impactful projects with a focus on innovation and collaboration.`,
+        desc: `I am Sanjay Khatal, frontend developer with ${experience.years}+ years of experience in building responsive, crossplatform applications. Skilled in translating designs into scalable solutions and optimizing performance. Currently working in the healthcare domain, ensuring seamless UI/UX for critical applications. Gained on-site experience in Bhutan, delivering impactful projects with a focus on innovation and collaboration.`,
         age: age,
         experience: experience,
         address: 'Pune, Maharashtra',
@@ -88,6 +86,15 @@ const data = {
             location: 'Satara'
         }
     ],
+    onsiteExperience: [
+        {
+            role: 'Software Developer',
+            desc: 'Maintained productive communication, with responsibilities including gathering requirements, offering solutions for project improvement, and providing progress updates to align with client expectations.',
+            duration: 'Apr 2023 - Aug 2023',
+            organization: 'DHI, Thimphu, Bhutan',
+            logo: '/ndi.webp'
+        }
+    ],
     skills: [
         {
             name: 'ReactJS',
@@ -108,6 +115,57 @@ const data = {
         {
             name: 'Redux/RTK',
             level: 60
+        }
+    ],
+    projects: [
+        {
+            role: 'Front end Developer',
+            desc: [
+                'Contributed to the frontend development of Tendable, a healthcare domain product used in the UK and other countries.',
+                'Implemented UI designs, collaborated with cross-functional teams for QA, product requirement gathering, and deployment.',
+                'Worked closely with product owners, mobile developers to ensure consistency across web and mobile platforms.',
+                'Created feature documentation and flowcharts to streamline development and improve clarity.',
+                'Developed new features, handled bug fixes, and implemented change requests as per client requirements.'
+            ],
+            duration: 'May 2024 - Present',
+            name: 'Tendable',
+            poster: '/project/tendable.png'
+        },
+        {
+            role: 'Full-stack Developer',
+            desc: [
+                'Contributed to an open-source project as a full-stack developer using ReactJS and NestJS.',
+                'Engaged in peer code reviews and optimized code implementation for efficiency.',
+                'Adhered to best Git practices, ensuring clean commits and pull request management.',
+                'Implemented form validations on the frontend and working on API validations and errors handling on the backend.'
+            ],
+            duration: 'Sep 2023 - Apr 2024',
+            name: 'CREDEBL 2.0',
+            poster: '/project/credebl.png'
+        },
+        {
+            role: 'Front end Developer',
+            desc: [
+                'NDI website core functionality implemented for seamless content updates and blog posts: Utilized AWS Amplify as a CMS platform, Enabled non-technical users to contribute',
+                'Backend tasks focused on data normalization and establishing table relationships in the datastore',
+                'Enhanced search engine optimization: Implemented NextJS as the frontend framework, Enabled dynamic SEO updates on all pages for the business team'
+            ],
+            duration: 'Apr 2023 - Sep 2023',
+            name: 'National Digital Identity',
+            poster: '/project/ndi.png'
+        },
+        {
+            role: 'Front end Developer',
+            desc: [
+                'Full-stack role with JIRA for task understanding and optimized reusable components implementation',
+                'Ensured responsive UI meeting client criteria and design',
+                'Conducted weekly client calls and daily team calls for queries and task clarification',
+                'Project included Angular web app, Ionic mobile app, and NestJS backend',
+                'Implemented Docker-based parallel deployment and deployed 3 projects at the same time'
+            ],
+            duration: 'Aug 2022 - Jan 2023',
+            name: 'NFT Benefit Redemption',
+            poster: '/project/nft.jpg'
         }
     ],
     knowledge: [
