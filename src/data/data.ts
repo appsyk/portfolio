@@ -72,7 +72,7 @@ const data = {
         {
             institute: 'Datta Meghe College of Engineering, Airoli (Mumbai University)',
             degree: "Bachelor's of Engineering in Computer Science",
-            desc: 'Collaborate with creative and development teams on the executi',
+            desc: 'Completed a degree in Computer Engineering and actively participated in coding practices, including developing web applications and a final year project.',
             university: 'Mumbai University',
             duration: 'Jul 2015 - Apr 2019',
             location: 'Navi Mumbai'
@@ -80,7 +80,7 @@ const data = {
         {
             institute: 'YC Institute of Science',
             degree: 'HSC',
-            desc: 'Collaborate with creative and development teams on the executi',
+            desc: 'Completed Higher Secondary Education with a focus on the Science stream.',
             university: '',
             duration: 'Jun 2013 - Mar 2015',
             location: 'Satara'
