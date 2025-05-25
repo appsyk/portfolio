@@ -42,7 +42,7 @@ export default function RootLayout({
           <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-screen">
             <Bubbles />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[51%] h-full max-h-[570px] w-full max-w-[1290px] px-6 lg:px-12">
+          <div className="absolute left-1/2 top-[41%] lg:top-1/2 -translate-x-1/2 -translate-y-[51%] h-full max-h-[570px] w-full max-w-[1290px] px-6 lg:px-12">
             <div className="lg:flex h-[inherit]">
               <ViewContextProvider>
                 <PersistentSelf />

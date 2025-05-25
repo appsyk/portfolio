@@ -50,11 +50,11 @@ const Work = () => {
                         {
                             project.map((_, index) => (
                                 <div key={index} className='pt-4 first:pt-0 group cursor-pointer transition-all duration-500' onClick={() => handleLoadMore(_.name)}>
-                                    <div className='bg-gray-50 border rounded-2xl p-4 last:mb-0 grid grid-cols-3 gap-4'>
-                                        <div className='h-[134px] w-full'>
-                                            <Image className='group-hover:scale-105 transition-all duration-500 h-[134px] w-full object-cover' src={_.poster} alt={_.name} width={1000} height={40} />
+                                    <div className='bg-gray-50 border rounded-2xl p-4 last:mb-0 grid grid-cols-1 sm:grid-cols-3 gap-4'>
+                                        <div className='h-[300px] sm:h-[134px] w-full overflow-hidden'>
+                                            <Image className='group-hover:scale-105 transition-all duration-500 h-[300px] lg:h-[134px] w-full object-cover' src={_.poster} alt={_.name} width={1000} height={40} />
                                         </div>
-                                        <div className={`relative col-span-2 transition-all duration-500 ${_.loadMore ? 'h-full' : 'h-[134px]'} overflow-hidden`}>
+                                        <div className={`relative sm:col-span-2 transition-all duration-500 ${_.loadMore ? 'h-full' : 'h-[134px]'} overflow-hidden`}>
                                             <div className='absolute bottom-0 bg-gradient-to-t from-gray-50 via-gray-50 cursor-pointer to-transparent h-12 w-full text-sm text-end hover:underline text-primary flex justify-end items-end'
                                                 onClick={() => handleLoadMore(_.name)}>
                                                 <span className='-mb-[3px]'>{_.loadMore ? "Show less" : "Show more"}</span>
