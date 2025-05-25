@@ -24,7 +24,7 @@ export const ViewContextProvider = ({ children }: { children: React.ReactNode })
     const currentHash = typeof window !== 'undefined' ? window.location.hash : route[0];
     const currentRoute = Object.entries(route).find(_ => _[1] === currentHash)?.[0];
 
-    const [view, setView] = useState(Number(currentRoute));
+    const [view, setView] = useState(Number(currentRoute || 0));
 
     const contextValue: ViewContextType = {
         view,
