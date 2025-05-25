@@ -1,5 +1,7 @@
 import SectionLabel from '@/common-components/SectionLabel'
 import data from '@/data/data'
+import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 const AboutMe = () => {
@@ -136,6 +138,42 @@ const AboutMe = () => {
                     </div>
                 </div>
             }
+            <div className='divide-y mt-8'>
+                <SectionLabel label="Certificates" />
+                <div className=''>
+                    <div className='my-4 grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                        {data.certificates.map(_ => (
+                            <div key={_.name} className='p-4 group bg-gradient-to-t from-gray-100 to-transparent rounded-md overflow-hidden'>
+                                <div className='flex flex-col items-center mb-3'>
+                                    <Image className='h-[200px] w-auto group-hover:scale-105 transition-all duration-300 object-cover' src={_.image} alt={_.name} width={400} height={300} quality={100} />
+                                </div>
+                                <div className='text-sm'>{_.name}</div>
+                                <Link href={_.link} target="_blank" className='text-start text-secondary hover:text-primary text-xs flex gap-1 items-center'>
+                                    <span>View certificate</span>
+                                    <svg className='w-5 h-5 group-hover:translate-x-2 transition-all' focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"></path>
+                                    </svg>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className='divide-y mt-8'>
+                <SectionLabel label={data.awards.length === 1 ? 'Award' : 'Awards'} />
+                <div className=''>
+                    <div className='my-4 grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                        {data.awards.map((_, index) => (
+                            <div key={index} className='p-4 group bg-gradient-to-t from-gray-100 to-transparent rounded-md overflow-hidden'>
+                                <div className='flex flex-col items-center'>
+                                    <Image className='h-[248px] w-auto group-hover:scale-105 transition-all duration-300 object-cover' src={_} alt={'award' + index} width={400} height={300} quality={100} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

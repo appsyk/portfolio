@@ -37,6 +37,24 @@ const data = {
         address: 'Pune, Maharashtra',
         language: ['English', 'Hindi', 'Marathi']
     },
+    certificates: [
+        {
+            name: 'Frontend Developer (React) Certificate',
+            image: '/project/react.jpeg',
+            link: 'https://www.hackerrank.com/certificates/3eaf17900f21'
+        },
+        {
+            name: 'JavaScript (Intermediate) Certificate',
+            image: '/project/js-inter.jpeg',
+            link: 'https://www.hackerrank.com/certificates/7f2786746f5e'
+        },
+        {
+            name: 'JavaScript (Basic) Certificate',
+            image: '/project/js-basic.png',
+            link: 'https://www.hackerrank.com/certificates/471640e90538'
+        }
+    ],
+    awards: ['/project/spotlight.jpeg'],
     quote: '',
     experience: [
         {
@@ -98,23 +116,66 @@ const data = {
     skills: [
         {
             name: 'ReactJS',
-            level: 80
+            level: 80,
+            iconName: 'devicon-react-original'
         },
         {
             name: 'JavaScript',
-            level: 80
+            level: 80,
+            iconName: 'devicon-javascript-plain'
         },
         {
             name: 'TypeScript',
-            level: 65
+            level: 65,
+            iconName: 'devicon-typescript-plain'
         },
         {
-            name: 'HTML/CSS/SCSS',
-            level: 80
+            name: 'NextJS',
+            level: 60,
+            iconName: 'devicon-nextjs-plain'
         },
         {
             name: 'Redux/RTK',
-            level: 60
+            level: 60,
+            iconName: 'devicon-redux-original'
+        },
+        {
+            name: 'HTML',
+            level: 90,
+            iconName: 'devicon-html5-plain'
+        },
+        {
+            name: 'CSS/SCSS',
+            level: 90,
+            iconName: 'devicon-css3-plain'
+        },
+        {
+            name: 'Tailwind CSS',
+            level: 85,
+            iconName: 'devicon-tailwindcss-original'
+        }
+    ],
+    otherTechSkill: [
+        {
+            name: 'Docker',
+            level: 55,
+            iconName: 'devicon-docker-plain'
+        },
+        {
+            name: 'GitHub',
+            level: 80,
+            iconName: 'devicon-github-original'
+        },
+        {
+            name: 'Jest',
+            level: 72,
+            iconName: 'devicon-jest-plain'
+        },
+        {
+            name: 'Strapi (CMS)',
+            level: 65,
+            image: true,
+            iconName: '/project/strapi.png'
         }
     ],
     projects: [
@@ -169,14 +230,20 @@ const data = {
         }
     ],
     knowledge: [
-        'Website hosting',
-        'iOS and android apps',
-        'Create logo design',
-        'Design for print',
-        'Modern and mobile-ready',
-        'Advertising services include',
-        'Graphics and animations',
-        'Search engine marketing',
+        'Modern and responsive web design',
+        'Website layout and user interface planning',
+        'Mobile-first and cross-device compatibility',
+        'Frontend project planning and execution',
+        'Branding and visual consistency in UI',
+        'Component-based design thinking',
+        'Web accessibility and usability',
+        'Version control with Git and GitHub',
+        'Web content structure and page flow',
+        'Real-time collaboration with design and backend teams',
+        'Agile and sprint-based development process',
+        'Web optimization for speed and performance',
+        'Client requirement understanding and implementation',
+        'Code readability and maintainability best practices'
     ]
 }
 
