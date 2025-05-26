@@ -91,7 +91,7 @@ const Resume = () => {
             </div>
             <div className='divide-y mt-8'>
                 <SectionLabel label='Programming Skills' />
-                <div className='py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
+                <div className='py-4 grid grid-cols-2 lg:grid-cols-4 gap-4'>
                     {data.skills.map((_, index) => (
                         <div key={index} className='p-2 group bg-gradient-to-t from-gray-100 to-transparent rounded-md overflow-hidden'>
                             <div className='relative flex flex-col items-center'>
@@ -108,7 +108,7 @@ const Resume = () => {
             </div>
             <div className='divide-y mt-8'>
                 <SectionLabel label='Other Technical Skills' />
-                <div className='py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
+                <div className='py-4 grid grid-cols-2 lg:grid-cols-4 gap-4'>
                     {data.otherTechSkill.map((_, index) => (
                         <div key={index} className='p-2 group bg-gradient-to-t from-gray-100 to-transparent rounded-md overflow-hidden'>
                             <div className='relative flex flex-col items-center'>
@@ -126,7 +126,7 @@ const Resume = () => {
 
             <div className='divide-y mt-8'>
                 <SectionLabel label='Knowledge' />
-                <div className='py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4'>
+                <div className='py-4 grid grid-cols-1 lg:grid-cols-2 gap-2'>
                     {
                         data.knowledge.map((_, index) => (
                             <div key={index} className='flex gap-2 items-center mb-1 last:mb-0'>
