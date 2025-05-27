@@ -9,7 +9,7 @@ const Self = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCount((prev) => prev + 1);
-        }, 5500)
+        }, 5512)
 
         return () => clearInterval(timer);
     }, [])
