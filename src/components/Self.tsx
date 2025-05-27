@@ -4,12 +4,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
+function delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 const Self = () => {
     const [count, setCount] = useState(0);
     useEffect(() => {
+        delay(500);
         const timer = setInterval(() => {
             setCount((prev) => prev + 1);
-        }, 5512)
+        }, 5530)
 
         return () => clearInterval(timer);
     }, [])

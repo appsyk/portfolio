@@ -62,7 +62,6 @@ body {
   animation-fill-mode: forwards;
   animation-name: page-change;
   animation-duration: 0.5s;
-  animation-delay: 0.2s;
 }
 
 .detailed-info-animation {
@@ -70,7 +69,7 @@ body {
   animation-fill-mode: forwards;
   animation-name: page-change;
   animation-duration: 0.5s;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 @keyframes slide {
