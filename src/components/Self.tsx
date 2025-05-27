@@ -11,10 +11,10 @@ function delay(ms: number) {
 const Self = () => {
     const [count, setCount] = useState(0);
     useEffect(() => {
-        delay(500);
+        delay(2500);
         const timer = setInterval(() => {
             setCount((prev) => prev + 1);
-        }, 5530)
+        }, 5500)
 
         return () => clearInterval(timer);
     }, [])
