@@ -4,14 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-function delay(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
 const Self = () => {
     const [count, setCount] = useState(0);
     useEffect(() => {
-        delay(2500);
         const timer = setInterval(() => {
             setCount((prev) => prev + 1);
         }, 5500)
@@ -47,7 +42,7 @@ const Self = () => {
                         {data.name}
                     </h2>
                     <div className='text-primary text-sm mb-4 overflow-hidden'>
-                        <div className="role-animation w-fit">
+                        <div className={`w-fit transition-all role-animation start-animation-${count}`}>
                             {data.role[count] || "-"}
                         </div>
                     </div>
