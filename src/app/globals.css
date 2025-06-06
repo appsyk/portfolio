@@ -14,11 +14,11 @@ body {
   margin: 0 auto;
   letter-spacing: .15em;
   font-weight: 500;
-  animation: slide 5.5s ease-in-out infinite;
 }
 
 .start-animation-0, .start-animation-1, .start-animation-2, .start-animation-3 {
-  animation: slide 5.5s ease-in-out infinite;
+  animation: slide 5.4s ease-in-out infinite;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .image-zoom-animation {
@@ -78,7 +78,8 @@ body {
 
 @keyframes slide {
   0% {
-    transform: translateX(-300px)
+    transform: translateX(-300px);
+    opacity: 0;
   }
 
   5% {
@@ -86,7 +87,8 @@ body {
   }
 
   10% {
-    transform: translateX(0)
+    transform: translateX(0);
+    opacity: 1;
   }
 
   85% {
@@ -98,7 +100,8 @@ body {
   }
 
   100% {
-    transform: translateX(300px)
+    transform: translateX(300px);
+    opacity: 1;
   }
 }
 
